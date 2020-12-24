@@ -10,10 +10,12 @@
 
 .side-bar-header {
   height: 100px;
+  color: white;
 }
 .dates {
   background-color: #a0d4a7;
   height: calc(100vh - 100px);
+  color: green;
 }
 
 
@@ -24,6 +26,7 @@
 }
 .foods-header {
   height: 100px;
+  color: green;
 }
 .all_foods {
   background-color: green;
