@@ -11,11 +11,13 @@
 .side-bar-header {
   height: 100px;
   color: white;
+  padding: 0 20px;
 }
 .dates {
   background-color: #a0d4a7;
   height: calc(100vh - 100px);
   color: green;
+  padding: 0 20px;
 }
 
 
@@ -27,10 +29,12 @@
 .foods-header {
   height: 100px;
   color: green;
+  padding: 0 40px;
 }
 .all_foods {
   background-color: green;
   height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
 }
 
 
