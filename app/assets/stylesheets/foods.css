@@ -16,7 +16,7 @@
 .dates {
   background-color: #a0d4a7;
   height: calc(100vh - 100px);
-  color: green;
+  color: white;
   padding: 0 20px;
 }
 
@@ -29,7 +29,7 @@
 }
 .foods-header {
   height: 100px;
-  color: green;
+  color: white;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
@@ -41,13 +41,13 @@
 
 .header-button a {
   text-decoration: none;
-  border: 1px solid darkred;
-  color: darkred;
+  border: 1px solid saddlebrown;
+  color: saddlebrown;
   padding: 20px;
 }
 
 .all_foods {
-  background-color: green;
+  background-color: white;
   height: calc(100vh - 100px - 90px);
   padding: 46px 40px 0;
 }
