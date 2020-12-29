@@ -11,11 +11,13 @@
 .side-bar-header {
   height: 100px;
   color: white;
+  padding: 0 20px;
 }
 .dates {
   background-color: #a0d4a7;
   height: calc(100vh - 100px);
-  color: green;
+  color: white;
+  padding: 0 20px;
 }
 
 
@@ -23,19 +25,75 @@
 .foods {
   background-color: #a0d4a7;
   width: calc(100vw - 300px);
+  overflow: scroll;
 }
 .foods-header {
   height: 100px;
-  color: green;
+  color: white;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
+
+.header-button {
+  margin-top: 40px;
+}
+
+.header-button a {
+  text-decoration: none;
+  border: 1px solid saddlebrown;
+  color: saddlebrown;
+  padding: 20px;
+}
+
 .all_foods {
-  background-color: green;
+  background-color: white;
   height: calc(100vh - 100px - 90px);
+  padding: 46px 40px 0;
 }
 
 
 
-.new {
-  background-color: #ffffff;
+.form {
+  background-color: #DDDDDD;
   height: 90px;
+  padding: 20px 40px;
+  display: flex;
 }
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+.form-dates {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+/* .form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+} */
