@@ -1,3 +1,57 @@
-// Place all the styles related to the course controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+header{
+  height:100px;
+  width: 100%;
+  background-color:lightgray;
+  color: black;
+  margin-bottom: 20px;
+  padding: 15px;
+ }
+ 
+ .top{
+  height: 250px;
+  width: 100%;
+  background-color:white;
+  display: flex;
+  justify-content: space-around;
+ }
+ 
+ .left-content{
+  width: 300px;
+  height: 200px;
+  background-color: lightgreen;
+  color: white;
+  padding: 20px;
+ }
+ 
+ .center-content{
+  width: 300px;
+  height: 200px;
+  background-color: skyblue;
+  color: white;
+  padding: 20px;
+ }
+ 
+ .right-content{
+  width: 300px;
+  height: 200px;
+  background-color: pink;
+  color: white;
+  padding: 20px;
+ }
+
+.under{
+  height: 250px;
+  width: 100%;
+  background-color: lightyellow;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+ .body-weight{
+  height: 100px;
+ }
+
+ .target-value{
+  height: 100px;
+ }
