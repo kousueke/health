@@ -36,14 +36,17 @@
 
       <div class="body_weight">
         <h3>ご自身の体重を入力してください</h3>
-        体重記入欄
+        <%= text_field_tag "body-weight", "ご自身の体重" %>
       </div>
 
       <div class="target_value">
         <h3>目標値</h3>
-        計算後の目標値の表示
+        <%= text_field_tag "body-weight", "計算後の目標値" %>
       </div>
 
     </div>
+      <div class="next_btn">
+        <%=link_to '次へ', foods_index_path, class:"next-btn" %>
+      </div>
   </body>
 </html>
