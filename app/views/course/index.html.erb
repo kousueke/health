@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+  <script src="index.js"></script>
     <meta charset="UTF-8">
     <%# <link rel="stylesheet" href="style3-5.css"> %>
   </head>
@@ -36,12 +37,13 @@
 
       <div class="body_weight">
         <h3>ご自身の体重を入力してください</h3>
-        <%= text_field_tag "body-weight", "ご自身の体重" %>
+        <%= text_field_tag id:"body_weight" %>kg
+        
       </div>
 
       <div class="target_value">
-        <h3>目標値</h3>
-        <%= text_field_tag "target-value" %>
+        <h3>目標値（1日のタンパク質摂取目標量）</h3>
+        <%= text_field_tag id:"target-value" %>g 
       </div>
 
     </div>
