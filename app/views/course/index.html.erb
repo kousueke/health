@@ -7,6 +7,8 @@
   </head>
   <body>
     <header>
+    <%= form_with model: @course, local: true do |f| %>
+
     <h2>コース選択画面</h2>
     </header>
     <div class="top">
@@ -37,18 +39,19 @@
 
       <div class="body_weight">
         <h3>ご自身の体重を入力してください</h3>
-        <%= text_field_tag id:"body_weight" %>kg
+        <%= f.text_field id:"body_weight" %>kg
         
       </div>
 
       <div class="target_value">
         <h3>目標値（1日のタンパク質摂取目標量）</h3>
-        <%= text_field_tag id:"target-value" %>g 
+        <%= f.text_field id:"target-value" %>g 
       </div>
 
     </div>
       <div class="next_btn">
         <%=link_to '次へ', foods_index_path, class:"next-btn" %>
       </div>
+      <% end %>
   </body>
 </html>
