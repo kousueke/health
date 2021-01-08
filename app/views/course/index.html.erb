@@ -37,18 +37,30 @@
 
     <div class="under">
 
-      <div class="body_weight">
-        <h3>ご自身の体重を入力してください</h3>
-        <%= f.text_field id:"body_weight" %>kg
-        
+      <div class="weight_content">
+
+        <div class="body_weight">
+          <h3>ご自身の体重を入力してください</h3>
+          <%= f.text_field :weight, class:"weight-input", id:"body_weight" %>kg
+        </div>
+
       </div>
 
-      <div class="target_value">
-        <h3>目標値（1日のタンパク質摂取目標量）</h3>
-        <%= f.text_field id:"target-value" %>g 
-      </div>
+      <div class="weight_content">
 
+        <div class="target_value">
+          <span><h3>目標値</h3></span>
+
+          <span>
+          
+          <span id='target_value'></span>g
+        </div>
+          </span>
+
+      </div>
     </div>
+
+
       <div class="next_btn">
         <%=link_to '次へ', foods_index_path, class:"next-btn" %>
       </div>

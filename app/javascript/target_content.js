@@ -5,9 +5,11 @@ window.addEventListener('load', () => {
 
   weightInput.addEventListener("input", () => {
     const inputValue = weightInput.value;
+    console.log("自身の体重");
 
     const addTargetValue = document.getElementById("target_value");
-  const weight = (inputValue * 1.5);
+  const weight = (inputValue * 3);
+  console.log("目標値");
   addTargetValue.innerHTML = Math.floor(weight);
 
 });
