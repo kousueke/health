@@ -36,33 +36,33 @@
     </div>
 
     <div class="under">
-
       <div class="weight_content">
-
         <div class="body_weight">
           <h3>ご自身の体重を入力してください</h3>
           <%= f.text_field :weight, class:"weight-input", id:"body_weight" %>kg
         </div>
-
       </div>
 
-      <div class="weight_content">
+      <div class="weight-bold-text">
+          発送までの日数
+          <span class="indispensable">必須</span>
+      </div>
+        <%= f.collection_select(:course_name_id, CourseName.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
+      
 
+      <div class="weight_content">
         <div class="target_value">
           <span><h3>目標値</h3></span>
-
           <span>
-          
           <span id='target_value'></span>g
         </div>
           </span>
-
       </div>
     </div>
 
 
       <div class="next_btn">
-        <%=link_to '次へ', foods_index_path, class:"next-btn" %>
+        <%=link_to '設定完了', foods_index_path, class:"next-btn" %>
       </div>
       <% end %>
   </body>
