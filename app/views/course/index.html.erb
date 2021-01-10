@@ -43,12 +43,10 @@
         </div>
       </div>
 
-      <div class="weight-bold-text">
-          発送までの日数
-          <span class="indispensable">必須</span>
+      <div class="weight_content">
+          <h3>コースを選択してください</h3>
+          <%= f.collection_select(:course_name_id, CourseName.all, :id, :name, {}, {class:"select-box"}) %>
       </div>
-        <%= f.collection_select(:course_name_id, CourseName.all, :id, :name, {}, {class:"select-box", id:"item-scheduled-delivery"}) %>
-      
 
       <div class="weight_content">
         <div class="target_value">
