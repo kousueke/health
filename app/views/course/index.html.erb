@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <%# <link rel="stylesheet" href="style3-5.css"> %>
+  </head>
+  <body>
+    <header>
+    <%= form_with model: @course, local: true do |f| %>
+
+    <h2>コース選択画面</h2>
+    </header>
+    <div class="top">
+
+      <div class="left-content">
+        <h2>健康コース</h2>
+        <p>
+        目標値となるタンパク質摂取量=ご自身の体重×1.2g
+        </p>
+      </div>
+
+      <div class="center-content">
+        <h2>マッチョコース</h2>
+        <p>
+        目標値となるタンパク質摂取量=ご自身の体重×1.6g
+        </p>
+      </div>
+
+      <div class="right-content">
+        <h2>超マッチョコース</h2>
+        <p>
+        目標値となるタンパク質摂取量=ご自身の体重×2.0g
+        </p>
+      </div>
+    </div>
+
+    <div class="under">
+      <div class="weight_content">
+        <div class="body_weight">
+          <h3>ご自身の体重を入力してください</h3>
+          <%= f.text_field :weight, class:"weight-input", id:"body_weight" %>kg
+        </div>
+      </div>
+
+      <div class="weight_content">
+          <h3>コースを選択してください</h3>
+          <%= f.collection_select(:course_name_id, CourseName.all, :id, :name, {id:"course_name_id"}, {class:"select-box"}) %>
+      </div>
+
+      <div class="weight_content">
+        <div class="target_value">
+          <span><h3>目標値</h3></span>
+          <span>
+          <span id='target_value'></span>g
+        </div>
+          </span>
+      </div>
+    </div>
+
+
+      <div class="next_btn">
+        <%=link_to '設定完了', foods_index_path, class:"next-btn" %>
+      </div>
+      <% end %>
+  </body>
+</html>

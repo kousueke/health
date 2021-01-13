@@ -12,12 +12,15 @@
   height: 100px;
   color: white;
   padding: 0 20px;
+  border:2px solid white;
 }
 .dates {
   background-color: #a0d4a7;
   height: calc(100vh - 100px);
   color: white;
   padding: 0 20px;
+  border:0 2px 2px;
+  border: solid white;
 }
 
 
@@ -33,6 +36,7 @@
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  border:2px solid white;
 }
 
 .header-button {
@@ -48,7 +52,7 @@
 
 .all_foods {
   background-color: white;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 100px - 200px);
   padding: 46px 40px 0;
 }
 
@@ -56,9 +60,11 @@
 
 .form {
   background-color: #DDDDDD;
-  height: 90px;
+  height: 200px;
   padding: 20px 40px;
   display: flex;
+  border:2px 0 2px 2px;
+  border: solid white;
 }
 
 .form-input {
@@ -69,17 +75,17 @@
 
 .form-dates {
   border: none;
-  height: 50px;
+  height: 160px;
   width: 100%;
   padding-left: 10px;
 }
 
 .form-submit {
-  background-color: #38AEF0;
+  background-color: black;
   border: none;
   color: white;
   font-size: 16px;
-  height: 50px;
+  height: 160px;
   margin-left: 15px;
   padding: 0 20px;
 }
