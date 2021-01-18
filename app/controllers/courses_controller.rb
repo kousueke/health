@@ -1,0 +1,27 @@
+class CoursesController < ApplicationController
+
+  def index
+    @courses = Course.all
+  end
+
+  def new
+    @course = Course.new
+  end
+
+  def create
+    @course = Course.new(courses_params)
+    if @course.save
+      redirect_to root_path
+    else
+      render :index
+    end
+  end
+
+  
+
+  def courses_params
+    params.permit(:weight, :course_name_id).merge(user_id: current_user.id)
+  end
+
+end
+
