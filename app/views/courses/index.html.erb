@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-    <%= form_with model: @course, local: true do |f| %>
+    <%= form_with(model: @course, local: true) do |f| %>
 
     <h2>コース選択画面</h2>
     </header>
@@ -60,7 +60,8 @@
 
 
       <div class="next_btn">
-        <%=link_to '設定完了', foods_index_path, class:"next-btn" %>
+        <%= f.submit "設定完了", class:"next-btn" %>
+        <%# <%= link_to '設定完了', foods_index_path, class:"next-btn" %>
       </div>
       <% end %>
   </body>
