@@ -54,7 +54,7 @@ A：軽運動をしていて体型を維持したい人、B:筋トレをして�
 | Column            | Type       | Options                        |
 | ----------------- | ---------- | ------------------------------ |
 | name              | string     | null: false                    |
-| amount_of_protein | string     | null: false                    |
+| amount_of_protein | integer    | null: false                    |
 | number            | integer    | null: false                    |
 | course_id         | references | null: false, foreign_key: true |
 | user_id           | references | null: false, foreign_key: true |
