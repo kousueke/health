@@ -15,11 +15,26 @@
 </div>
 
 <div class="all_foods">
+
+  <div class="food_name-qqq">
+    <%# <h3>名目</h3>
+    <%= f.text_field :name, class:"", id:"" %> %>
+  </div>
+
+  <div class="amount_of_protein_value-qqq">
+    <%# <h3>プロテイン含有量</h3>
+    <%= f.text_field :amount_of_protein_value, class:"", id:"" %> %>
+  </div>
+
+  <div class="number-qqq">
+    <%# <h3>数量</h3>
+    <%= f.text_field :number, class:"", id:"" %> %>
+  </div>
 </div>
 
-<div class="form">
-  <div class="form-input">
-    <input class="form-dates" placeholder= "食品名/タンパク質含有量">
+  <div class="add-food-content">
+    <div class="add-food">
+      <h3><%=link_to '食品を追加する', new_food_path, class:"add-btn" %></h3>
+    </div>
   </div>
-  <input class="form-submit" type="submit" value="登録">
 </div>

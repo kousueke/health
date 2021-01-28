@@ -61,6 +61,17 @@
 
 
 
+.add-food-content{
+  display: flex;
+  background-color: beige;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 40px;
+}
+
+
+
+
 .form {
   background-color: #DDDDDD;
   height: 200px;
