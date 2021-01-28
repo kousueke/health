@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
+
   # before_action :set_1
   # before_action :set_2
   # before_action :set_food3, only: [:index]
