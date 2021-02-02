@@ -17,12 +17,13 @@ class FoodsController < ApplicationController
 
   def create
     @food = Food.new(food_params)
-    if @food.save
-      redirect_to :index
+    if @food.save!
+      redirect_to root_path
+      
     else
       render :new
     end
-    binding.pry
+    
   end
   # def set_1
   #   redirect_to new_user_registration unless current_user.id == @course.user_id
@@ -40,6 +41,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id)
+    params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id, course_id: current_user.id)
   end
 end
