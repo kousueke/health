@@ -6,7 +6,7 @@ class FoodsController < ApplicationController
   # before_action :set_food3, only: [:index]
 
   def index
-    @foods = Food.all
+    @foods = Food.all.includes(:user).order('created_at DESC')
     @course = Course.all
     # @course = Course.new
   end
