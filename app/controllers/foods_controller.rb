@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-
+  before_action :set_item, only: [:show]
   # before_action :set_1
   # before_action :set_2
   # before_action :set_food3, only: [:index]
@@ -8,7 +8,7 @@ class FoodsController < ApplicationController
   def index
     @foods = Food.all
     @course = Course.all
-    @course = Course.new
+    # @course = Course.new
   end
 
   def new
@@ -42,5 +42,9 @@ class FoodsController < ApplicationController
 
   def food_params
     params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id, course_id: current_user.id)
+  end
+
+  def set_item
+    @courses = Course.find(food_params[:id])
   end
 end
