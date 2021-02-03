@@ -57,6 +57,13 @@
   background-color: white;
   height: calc(100vh - 100px - 200px);
   padding: 46px 40px 0;
+  justify-content: space-between;
+  background-color: beige;
+  display: flex;
+}
+.list{
+  background-color: white;
+  height: 30%;
 }
 
 
