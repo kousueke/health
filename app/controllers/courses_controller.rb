@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(courses_params)
-    if @course.save
+    if @course.save！
       redirect_to root_path
     else
       render :index
