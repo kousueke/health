@@ -1,13 +1,13 @@
 <div class="side-bar-header">
 
-<%= form_with model: @course, class: 'course-name_id', local: true do |f| %>
-    <%# <h2>コース名</h2> %>
-    <%# <%= link_to courses_path(@course.id), method: :get do %> %>
-    <%# <h3 class='item-name'> %>
-      <%# <%= @course.course_name %> %>
-    <%# </h3> %>
-    <%# <% end %> %>
-    <% end %> 
+
+    <h5>コース名</h5>
+    <div class="course-name">
+      <% @course.each do |course| %>
+        <h5><%= course.course_name.name %></h5>
+      <% end %>
+    </div>
+    
 </div>
 
 <div class="dates">

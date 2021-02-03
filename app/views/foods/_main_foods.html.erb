@@ -17,25 +17,32 @@
 
 <div class="all_foods">
 
-  <div class="food_name-qqq">
-    <%# <h3>名目</h3>
-    <%= f.text_field :name, class:"", id:"" %> %>
-  </div>
+  <% @foods.each do |foods| %>
+    <li class='list'>
+      <div class="food_name-qqq">
+        名目
+        <%= foods.name %>
+      </div>
 
-  <div class="amount_of_protein_value-qqq">
-    <%# <h3>プロテイン含有量</h3>
-    <%= f.text_field :amount_of_protein_value, class:"", id:"" %> %>
-  </div>
+      <div class="amount_of_protein_value-qqq">
+        プロテイン含有量
+        <%= foods.amount_of_protein %>
+      </div>
 
-  <div class="number-qqq">
-    <%# <h3>数量</h3>
-    <%= f.text_field :number, class:"", id:"" %> %>
-  </div>
+      <div class="number-qqq">
+        数量
+        <%= foods.number %>
+      </div>
+    </li>
+  <% end %>
+  
 </div>
+
 
   <div class="add-food-content">
     <div class="add-food">
       <h3><%=link_to '食品を追加する', new_food_path, class:"add-btn" %></h3>
     </div>
   </div>
+
 </div>
