@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   get 'foods/index'
   post 'foods/index'
 
-  get 'courses/index'
-  post 'courses/index'
 
   devise_for :users
   root to: "foods#index"
