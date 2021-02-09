@@ -1,7 +1,9 @@
 <div class="foods-header">
     <div class="left-header">
       <h2>食品一覧</h2>
-      <%# <%= @course.course_name.weight %>
+      <% @course.each do |course| %>
+        <%= course.weight %>
+      <% end %>
     </div>
   <div class="right-header">
     <div class="header-button">
@@ -16,24 +18,27 @@
 </div>
 
 <div class="all_foods">
-
   <% @foods.each do |foods| %>
-    <li class='list'>
-      <div class="food_name-qqq">
-        名目
-        <%= foods.name %>
-      </div>
+    <% if user_signed_in? && current_user.id == foods.user_id %>
 
-      <div class="amount_of_protein_value-qqq">
-        プロテイン含有量
-        <%= foods.amount_of_protein %>
-      </div>
+      <li class='list'>
+        <div class="food_name-qqq">
+          名目
+          <%= foods.name %>
+        </div>
 
-      <div class="number-qqq">
-        数量
-        <%= foods.number %>
-      </div>
-    </li>
+        <div class="amount_of_protein_value-qqq">
+          プロテイン含有量
+          <%= foods.amount_of_protein %>
+        </div>
+
+        <div class="number-qqq">
+          数量
+          <%= foods.number %>
+        </div>
+      </li>
+
+    <% end %>
   <% end %>
   
 </div>
