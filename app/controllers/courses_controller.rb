@@ -21,7 +21,7 @@ class CoursesController < ApplicationController
   private
 
   def courses_params
-    params.permit(:weight, :course_name_id).merge(user_id: current_user.id)
+    params.permit(:weight, :course_name_id, :target_value).merge(user_id: current_user.id)
   end
 
 end

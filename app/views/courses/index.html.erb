@@ -48,6 +48,7 @@
           <%= f.collection_select(:course_name_id, CourseName.all, :id, :name, {id:"course_name_id"}, {class:"select-box"}) %>
       </div>
 
+
       <div class="weight_content">
         <div class="target_value">
           <span><h3>目標値</h3></span>
@@ -57,7 +58,6 @@
           </span>
       </div>
     </div>
-
 
       <div class="next_btn">
         <%= f.submit "設定完了", class:"next2-btn" %>
