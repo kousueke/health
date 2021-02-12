@@ -32,10 +32,15 @@ class FoodsController < ApplicationController
   #   redirect_to courses_path @course.courses_id=nil
   # end
   
-  # det set_food3
+  # def set_food3
   #   if user_signed_in? && @course.course_name_id == nil
   #     redirect_to courses_path
   #   end
+
+  # def set_food3
+  #   @course = Course.find(params[:id])
+  #   redirect_to courses_path if current_user.id == @course.id
+  # end
 
   private
 
@@ -43,7 +48,7 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id, course_id: current_user.id)
   end
 
-  def set_item
+  def set_1
     @courses = Course.find(food_params[:id])
   end
 end

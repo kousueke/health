@@ -14,9 +14,8 @@ ActiveRecord::Schema.define(version: 2021_01_19_000111) do
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.integer "course_name_id", null: false
+    t.float "course_name_id", null: false
     t.integer "weight", null: false
-    t.integer "target_value", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_courses_on_user_id"
