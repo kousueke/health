@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_item, only: [:show]
-  # before_action :set_1
+  before_action :set_, only: [:show]
+  # before_action :set_1, only: [:index]
   # before_action :set_2
   # before_action :set_food3, only: [:index]
 
@@ -49,6 +49,6 @@ class FoodsController < ApplicationController
   end
 
   def set_1
-    @courses = Course.find(food_params[:id])
+    @course = Course.find(params[:id])
   end
 end

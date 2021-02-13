@@ -44,7 +44,14 @@
 
   <div class="add-food-content">
     <div class="add-food">
+    <% @course.find do |course| %>
+    <% if current_user.id == course.user_id %><%# <%ログインユーザーとコースモデルのユーザーidが同じ場合(コースの選択をしている人) %>
       <h3><%=link_to '食品を追加する', new_food_path, class:"add-btn" %></h3>
+    <% else %>
+      <h3><%=link_to 'コースを選択する', courses_path, class:"acc-btn" %></h3>
+    <% end %>
+    <% end %>
+
     </div>
   </div>
 
