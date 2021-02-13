@@ -3,7 +3,7 @@
 
     <h5>ご自身のコース</h5>
     <div class="course-name">
-      <% @course.each do |course| %>
+      <% @course.find do |course| %>
         <h4><%= course.course_name.name %></h4>
       <% end %>
     </div>
