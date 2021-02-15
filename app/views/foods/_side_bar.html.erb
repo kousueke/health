@@ -13,5 +13,10 @@
 </div>
 
 <div class="dates">
+<h2>
+<% @course.find do |course| %>
+<%= link_to 'ユーザー情報へ', course_path(course.id), method: :get %>
+<% end %>
+</h2>
 <h2>weekデータ</h2>
 </div>

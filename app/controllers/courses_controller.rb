@@ -28,6 +28,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @course = Course.all
   end  
 
   private
