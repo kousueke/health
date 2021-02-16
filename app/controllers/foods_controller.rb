@@ -22,7 +22,6 @@ class FoodsController < ApplicationController
     else
       render :new
     end
-    
   end
   # def set_1
   #   redirect_to new_user_registration unless current_user.id == @course.user_id
@@ -31,7 +30,7 @@ class FoodsController < ApplicationController
   # def set_2
   #   redirect_to courses_path @course.courses_id=nil
   # end
-  
+
   # def set_food3
   #   if user_signed_in? && @course.course_name_id == nil
   #     redirect_to courses_path

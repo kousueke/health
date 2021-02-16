@@ -5,13 +5,12 @@ class CoursesController < ApplicationController
     @courses = Course.all
 
     @courses.find do |course|
-     if current_user.id && course.user_id # ログインユーザーのidとコースに登録しているユーザーidが同じ場合（同一人物）
-      render :index
-     else
-      redirect_to foods_index_path
-     end
+      if current_user.id && course.user_id # ログインユーザーのidとコースに登録しているユーザーidが同じ場合（同一人物）
+        render :index
+      else
+        redirect_to foods_index_path
+      end
     end
-
   end
 
   def new
@@ -29,13 +28,11 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.all
-  end  
+  end
 
   private
 
   def courses_params
     params.permit(:weight, :course_name_id).merge(user_id: current_user.id)
   end
-
 end
-
