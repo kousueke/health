@@ -1,5 +1,7 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_1, only: [:edit, :update, :show]
+  before_action :set_2, only: [:edit]
 
   def index
     @courses = Course.all
@@ -27,12 +29,30 @@ class CoursesController < ApplicationController
   end
 
   def show
-    @course = Course.all
+  end
+
+  def edit
+  end
+
+  def update
+    if @course.update(courses_params)
+      redirect_to courses_path(@course.id)
+    else
+      render :edit
+    end
   end
 
   private
 
   def courses_params
     params.permit(:weight, :course_name_id).merge(user_id: current_user.id)
+  end
+
+  def set_1
+    @course = Course.all
+  end
+
+  def set_2
+    @course = Course.all
   end
 end
