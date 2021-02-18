@@ -60,9 +60,9 @@
     </div>
     
     <div class="btn-contents">
-      <%= f.submit "変更する" ,class:"change-btn" %>
+      <%= f.submit "ユーザー情報を変更する" ,class:"next2-btn" %>
         <% @course.find do |course| %>
-        <%= link_to '戻る', course_path(course.id), method: :get %>
+        <%= link_to '戻る', course_path(course.id), method: :get, class:"next2-btn" %>
         <% end %> 
         <% end %>      
     </div>
