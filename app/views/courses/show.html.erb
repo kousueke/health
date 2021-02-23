@@ -1,19 +1,68 @@
-<h3>ユーザーの登録情報</h3>
 
-    <h5>ご自身の体重</h5>
+    <%# <h5>ご自身の体重</h5>
     <div class="course-weight">
       <% @course.find do |course| %>
-        <h4><%= course.weight %>g</h4>
-    </div>
+    <%# </div>
 
         <h5>ご自身のコース</h5>
     <div class="course-name">
-        <h4><%= course.course_name.name %></h4>
       <% end %>
+    <%# </div> %>
+
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <script src="index.js"></script>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+    <% @course.find do |course| %>
+
+    <h2>ユーザーの登録情報</h2>
+    </header>
+    <div class="top">
+
+      <div class="left-content">
+        <h2>健康コース</h2>
+        <p>
+        目標値となるタンパク質摂取量=ご自身の体重×1.2g
+        </p>
+      </div>
+
+      <div class="center-content">
+        <h2>マッチョコース</h2>
+        <p>
+        目標値となるタンパク質摂取量=ご自身の体重×1.6g
+        </p>
+      </div>
+
+      <div class="right-content">
+        <h2>超マッチョコース</h2>
+        <p>
+        目標値となるタンパク質摂取量=ご自身の体重×2.0g
+        </p>
+      </div>
     </div>
 
-  <%# 目標値 %>
+    <div class="under">
+      <h3>ご自身の体重</h3>
+      <div class="user-info">
+          <h2><%= course.weight %>kg</h2>
+      </div>
 
-   <h3><%= link_to 'ユーザー情報の編集', edit_course_path, method: :get, class: "red-btn" %></h3>
+      <h3>ご自身のコース</h3>
+      <div class="user-info">
+          <h2><%= course.course_name.name %></h2>
+      </div>
+    </div>
 
-    <h3><%=link_to '戻る', foods_index_path, class:"back-btn" %></h3>
+
+   <h3><%= link_to 'ユーザー情報の編集', edit_course_path, method: :get, class: "next2-btn" %></h3>
+
+    <h3><%=link_to '戻る', foods_index_path, class:"next2-btn" %></h3>
+
+      <% end %>
+  </body>
+</html>

@@ -74,7 +74,7 @@ header{
   background-color: black;
   color: white;
   display: flex;
-  margin-left: 85%;
+  margin-left: 75%;
   height: 50px;
   font-size: 30px;
   padding-left: 10px;
@@ -89,3 +89,9 @@ header{
   padding-left: 20px;
 }
 
+//詳細ページ用
+
+.user-info{
+  background-color:white;
+  padding: 5%;
+}
