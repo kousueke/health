@@ -36,7 +36,7 @@ class CoursesController < ApplicationController
 
   def update
     if @course.update(courses_params)
-      redirect_to courses_path(@course.id)
+      redirect_to course_path(@course.id)
     else
       render :edit
     end

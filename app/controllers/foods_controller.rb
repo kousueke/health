@@ -23,6 +23,13 @@ class FoodsController < ApplicationController
       render :new
     end
   end
+
+
+  def edit
+    @food = Food.all
+  end
+
+
   # def set_1
   #   redirect_to new_user_registration unless current_user.id == @course.user_id
   # end

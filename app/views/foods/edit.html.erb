@@ -1,0 +1,25 @@
+<div class="form">
+<%= form_with(model: @food, local: true) do |f| %>
+  <div class="form-input">
+  <h3>食品情報の変更</h3>
+  <div class="food_name">
+    <h3>名目(例：卵)</h3>
+    <%= f.text_field :name, class:"food-input", id:"food-name" %>
+  </div>
+
+  <div class="amount_of_protein_value">
+    <h3>プロテイン含有量</h3>
+    <%= f.text_field :amount_of_protein, class:"amount-of-protein-input", id:"amount-of-protein-value" %>g
+  </div>
+
+    <div class="number">
+    <h3>数量</h3>
+    <%= f.text_field :number, class:"num-input", id:"number" %>個(杯)
+  </div>
+
+   <div class="next_btn">
+     <%= f.submit "食品追加", class:"next-btn" %>
+   </div>
+
+  <% end %>
+</div>
