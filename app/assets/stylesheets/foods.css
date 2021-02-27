@@ -76,7 +76,10 @@
   margin: 40px;
 }
 
-
+.food-destroy{
+  color: red;
+  padding: 50px;
+}
 
 
 .form {
