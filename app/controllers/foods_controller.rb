@@ -30,6 +30,13 @@ class FoodsController < ApplicationController
   end
 
 
+  def destroy
+    @food = Food.find(params[:id])
+    @food.destroy
+    redirect_to root_path
+  end
+
+
   # def set_1
   #   redirect_to new_user_registration unless current_user.id == @course.user_id
   # end
