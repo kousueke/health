@@ -36,6 +36,11 @@
         </div>
 
         <div class="food-destroy">
+          <%= link_to '変更する', edit_food_path(foods.id), method: :get, class:'food-destroy' %>
+        </div>
+
+
+        <div class="food-destroy">
           <%= link_to '削除', food_path(foods.id), method: :delete, class:'food-destroy' %>
         </div>
       </li>

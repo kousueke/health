@@ -26,8 +26,15 @@ class FoodsController < ApplicationController
 
 
   def edit
-    @food = Food.all
+    @food = Food.find(params[:id])
   end
+
+  def update
+    food = Food.find(params[:id])
+    food.update(food_params)
+    redirect_to root_path
+  end
+
 
 
   def destroy
