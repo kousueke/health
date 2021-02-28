@@ -76,9 +76,14 @@
   margin: 40px;
 }
 
+.food-edit{
+  color: blue;
+  padding: 10px;
+}
+
 .food-destroy{
   color: red;
-  padding: 5px;
+  padding: 10px;
 }
 
 
