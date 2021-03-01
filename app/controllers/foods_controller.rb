@@ -24,7 +24,6 @@ class FoodsController < ApplicationController
     end
   end
 
-
   def edit
     @food = Food.find(params[:id])
   end
@@ -35,14 +34,11 @@ class FoodsController < ApplicationController
     redirect_to root_path
   end
 
-
-
   def destroy
     @food = Food.find(params[:id])
     @food.destroy
     redirect_to root_path
   end
-
 
   # def set_1
   #   redirect_to new_user_registration unless current_user.id == @course.user_id
