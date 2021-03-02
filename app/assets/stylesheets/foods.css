@@ -142,6 +142,10 @@
   margin: 10px;
 }
 
+.acc-btn{
+  color: red;
+}
+
 /* .form-image {
   font-size: 12px;
   background-color: lightblue;
