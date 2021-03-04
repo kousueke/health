@@ -1,7 +1,7 @@
 <div class="form">
 <%= form_with(model: @food, local: true) do |f| %>
   <div class="form-input">
-  <h3>食品情報の変更</h3>
+  <h4>変更画面</h4>
   <div class="food_name">
     <h3>名目(例：卵)</h3>
     <%= f.text_field :name, class:"food-input", id:"food-name" %>

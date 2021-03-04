@@ -7,12 +7,12 @@ class FoodsController < ApplicationController
 
   def index
     # //コースがなければ選択画面へ遷移する設定
-    if 
+    
     @foods = Food.all.includes(:user).order('created_at DESC')
     @course = Course.all
     # @course = Course.new
     @user = User.all
-    end
+    
   end
 
   def new
