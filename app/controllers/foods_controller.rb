@@ -1,6 +1,5 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_, only: [:show]
   # before_action :set_1, only: [:index]
   # before_action :set_2
   # before_action :set_food3, only: [:index]
@@ -10,7 +9,6 @@ class FoodsController < ApplicationController
     
     @foods = Food.all.includes(:user).order('created_at DESC')
     @course = Course.all
-    # @course = Course.new
     @user = User.all
     
   end
@@ -68,7 +66,4 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id, course_id: current_user.id)
   end
 
-  def set_1
-    @course = Course.find(params[:id])
-  end
 end
