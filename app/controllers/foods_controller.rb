@@ -6,11 +6,10 @@ class FoodsController < ApplicationController
 
   def index
     # //コースがなければ選択画面へ遷移する設定
-    
+
     @foods = Food.all.includes(:user).order('created_at DESC')
     @course = Course.all
     @user = User.all
-    
   end
 
   def new
@@ -65,5 +64,4 @@ class FoodsController < ApplicationController
   def food_params
     params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id, course_id: current_user.id)
   end
-
 end

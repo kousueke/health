@@ -1,7 +1,6 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_1, only: [:edit, :update, :show]
-  
 
   def index
     @courses = Course.all
@@ -51,6 +50,4 @@ class CoursesController < ApplicationController
   def set_1
     @course = Course.find(params[:id])
   end
-
-
 end
