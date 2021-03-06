@@ -1,15 +1,3 @@
-
-    <%# <h5>ご自身の体重</h5>
-    <div class="course-weight">
-      <% @course.find do |course| %>
-    <%# </div>
-
-        <h5>ご自身のコース</h5>
-    <div class="course-name">
-      <% end %>
-    <%# </div> %>
-
-
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -17,11 +5,11 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <header>
-    <% @course.find do |course| %>
 
+    <header>
     <h2>ユーザーの登録情報</h2>
     </header>
+
     <div class="top">
 
       <div class="left-content">
@@ -49,20 +37,19 @@
     <div class="under">
       <h3>ご自身の体重</h3>
       <div class="user-info">
-          <h2><%= course.weight %>kg</h2>
+          <h2><%= @course.weight %>kg</h2>
       </div>
 
       <h3>ご自身のコース</h3>
       <div class="user-info">
-          <h2><%= course.course_name %></h2>
+          <h2><%= @course.course_name %></h2>
       </div>
     </div>
 
 
-   <h3><%= link_to 'ユーザー情報の編集', edit_course_path, method: :get, class: "next2-btn" %></h3>
+   <h3><%= link_to 'ユーザー情報の編集', edit_course_path(@course.id), method: :get, class: "next3-btn" %></h3>
 
     <h3><%=link_to '戻る', foods_index_path, class:"next2-btn" %></h3>
-
-      <% end %>
+      <%# <% end %>
   </body>
 </html>
