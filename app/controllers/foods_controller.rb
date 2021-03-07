@@ -10,7 +10,7 @@ class FoodsController < ApplicationController
     @foods = Food.all.includes(:user).order('created_at DESC')
     @course = Course.all
     @user = User.all
-    # @user = User.find(params[:id])
+    
   end
 
   def new
@@ -27,12 +27,14 @@ class FoodsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-    @food.update(food_params)
-    redirect_to root_path
+    if @food.update(food_params)
+       redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
