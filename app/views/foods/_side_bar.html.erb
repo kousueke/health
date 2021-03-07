@@ -1,20 +1,6 @@
 <div class="side-bar-header">
 
-    <div class="user_name">
-      <% @user.find do |user| %>
-      <% if current_user.id == user.id %>
-      <h4><%= user.nickname %>さん</h4>
-      <% end %>
-      <% end %>
-    </div>
-    
-    <div class="course-name">
-      <% @course.find do |course| %>
-      <% if current_user.id == course.user_id %>
-        <h4><%= course.course_name %></h4>
-      <% end %>
-      <% end %>
-    </div>
+
     
 </div>
 
