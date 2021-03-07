@@ -1,6 +1,6 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  # before_action :set_1, only: [:index]
+  before_action :set_1, only: [:edit, :update, :destroy]
   # before_action :set_2
   # before_action :set_food3, only: [:index]
 
@@ -10,6 +10,7 @@ class FoodsController < ApplicationController
     @foods = Food.all.includes(:user).order('created_at DESC')
     @course = Course.all
     @user = User.all
+    # @user = User.find(params[:id])
   end
 
   def new
@@ -26,22 +27,20 @@ class FoodsController < ApplicationController
   end
 
   def edit
-    @food = Food.find(params[:id])
+    
   end
 
   def update
-    food = Food.find(params[:id])
-    food.update(food_params)
+    @food.update(food_params)
     redirect_to root_path
   end
 
   def destroy
-    @food = Food.find(params[:id])
     @food.destroy
     redirect_to root_path
   end
 
-  # def set_1
+  # def set
   #   redirect_to new_user_registration unless current_user.id == @course.user_id
   # end
 
@@ -63,5 +62,9 @@ class FoodsController < ApplicationController
 
   def food_params
     params.require(:food).permit(:name, :amount_of_protein, :number).merge(user_id: current_user.id, course_id: current_user.id)
+  end
+
+  def set_1
+    @food = Food.find(params[:id])
   end
 end
