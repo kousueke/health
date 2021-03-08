@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-    <%= form_with model: @course_path, url: course_path, local: true do |f| %>
+    <%= form_with model: @course, url: course_path, local: true do |f| %>
 
 
     <h3>ユーザー情報の編集ページ</h3>
@@ -60,7 +60,7 @@
     </div>
     
     <div class="btn-contents">
-      <%= f.submit "ユーザー情報を変更する" ,class:"next3-btn" %>
+      <%= f.submit "ユーザー情報を変更する", class:"next3-btn" %>
         <%= link_to '戻る', course_path(@course.id), method: :get, class:"next2-btn" %>
         <% end %>      
     </div>

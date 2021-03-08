@@ -42,7 +42,7 @@
 
       <h3>ご自身のコース</h3>
       <div class="user-info">
-          <h2><%= @course.course_name %></h2>
+          <h2><%= @course.course_name.name %></h2>
       </div>
     </div>
 
@@ -50,6 +50,6 @@
    <h3><%= link_to 'ユーザー情報の編集', edit_course_path(@course.id), method: :get, class: "next3-btn" %></h3>
 
     <h3><%=link_to '戻る', foods_index_path, class:"next2-btn" %></h3>
-      <%# <% end %>
+
   </body>
 </html>
