@@ -7,5 +7,4 @@ class User < ApplicationRecord
   has_one :course
   has_many :foods
   has_many :days
-
 end

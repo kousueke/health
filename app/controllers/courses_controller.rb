@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
       else
         redirect_to foods_index_path
       end
-      end
+    end
   end
 
   def new
