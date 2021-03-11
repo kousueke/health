@@ -1,12 +1,14 @@
-アプリケーション名 the-protein
+アプリケーション名 health
 
 アプリケーション概要
 筋トレや健康維持を支えるためのアプリケーション。
 自分の理想の体に近づけるため、または体型維持のために1日のタンパク質量を計算しデータとして見る事ができる。
 
-URL  https://the-protein.herokuapp.com/
+URL  https://health-3.herokuapp.com/
 
-テスト用アカウント ログイン機能等を実装した場合は、記述しましょう。またBasic認証等を設けている場合は、そのID/Passも記述しましょう。
+テスト用アカウント 
+・Email/test@com
+・Password/111111
 
 利用方法
 自分の理想の体や維持したい体型に向けコースを選択する。
@@ -14,8 +16,12 @@ URL  https://the-protein.herokuapp.com/
 自分のでよく食べる食べ物をリスト化し管理しやすくする。
 
 目指した課題解決
-A：軽運動をしていて体型を維持したい人、B:筋トレをしていて少し体つきをよくしたい人、C:C:筋トレをしていて体を大きくしたい人に向けて日々の食事管理を手軽にすることが出来るようにした。
-また、視覚化をすることやLINEでの通知で継続するモチベーションを保つ。
+ユーザーの目指す体型をもとに「目標値」を設定し、目標値に向けた食事管理を手軽に行うことをめざしました。
+
+・健康コース：軽運動をしていて体型を維持したい人
+・マッチョコース:筋トレをしていて少し体つきをよくしたい人
+・超マッチョコース:C:筋トレをしていて体を大きくしたい人
+
 
 洗い出した要件
 
@@ -39,11 +45,11 @@ A：軽運動をしていて体型を維持したい人、B:筋トレをして�
 
 ## course テーブル
 
-| Column        | Type        | Options                        |
-| ------------- | ----------- | ------------------------------ |
-| body_weight   | string      | null: false                    |
-| target_value  | string      | null: false                    |
-| user_id       | references  | null: false, foreign_key: true |
+| Column         | Type        | Options                        |
+| -------------- | ----------- | ------------------------------ |
+| course_name_id | float       | null: false                    |
+| weight         | integer     | null: false                    |
+| user_id        | references  | null: false, foreign_key: true |
 
 
 - belongs_to :user
@@ -120,6 +126,3 @@ A：軽運動をしていて体型を維持したい人、B:筋トレをして�
 
 データベース設計  ER図
 er.png
-
-
-ローカルでの動作方法
