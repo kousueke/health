@@ -3,10 +3,24 @@ class FoodsController < ApplicationController
   before_action :set_1, only: [:edit, :update, :destroy]
 
   def index
-    # //コースがなければコース選択画面へ遷移する設定
     @foods = Food.all.includes(:user).order('created_at DESC')
     @user = User.all
     @course = Course.all
+    @course.find do |course|
+    #   # if course.user_id.present? # コースにユーザーidを登録している場合、登録ありfood画面、登録なしcourse画面
+    #   #   render :index
+    #   # else
+    #   #   redirect_to courses_path
+    #   # end
+    end
+    # //コースがなければコース画面へ
+    @courses = Course.find_by(user_id: current_user.id
+    if @courses
+      render :index
+    else
+      redirect_to courses_path
+    end
+
   end
 
   def new
