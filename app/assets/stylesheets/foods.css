@@ -53,6 +53,14 @@
   padding: 20px;
 }
 
+/* .day_protein{
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+} */
+
 .all_foods {
   background-color: white;
   height: calc(100vh - 100px - 200px);

@@ -14,12 +14,12 @@ class FoodsController < ApplicationController
     #   # end
     end
     # //コースがなければコース画面へ
-    @courses = Course.find_by(user_id: current_user.id
-    if @courses
-      render :index
-    else
-      redirect_to courses_path
-    end
+    # @courses = Course.find_by(user_id: current_user.id
+    # if @courses
+    #   render :index
+    # else
+    #   redirect_to courses_path
+    # end
 
   end
 

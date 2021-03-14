@@ -1,9 +1,9 @@
-<div class="foods-header">
-    <div class="left-header">
-      <h2>食品一覧</h2>
-<h1><%=link_to '※コースを選択してください', courses_path, class:"acc-btn" %></h1>
+  <div class="foods-header">
+      <div class="left-header">
+        <h2>食品一覧</h2>
+  <h1><%=link_to '※コースを選択してください', courses_path, class:"acc-btn" %></h1>
+      </div>
 
-    </div>
   <div class="right-header">
     <div class="header-button">
       <% if user_signed_in? %>
@@ -15,6 +15,15 @@
     </div>
   </div>
 </div>
+
+           <%# <div class="day_protein">
+            <div class="day_value">
+              <span><h3>今日のプロテイン摂取量</h3></span>
+              <span>
+              <span id='day_value'></span>g
+            </div>
+              </span>
+           </div> %>
 
 <div class="all_foods">
   <% @foods.each do |foods| %>
