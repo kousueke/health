@@ -6,11 +6,6 @@ class CoursesController < ApplicationController
     @courses = Course.all
 
     @courses.find do |course|
-      if current_user.id && course.user_id # ログインユーザーのidとコースに登録しているユーザーidが同じ場合（同一人物）
-        render :index
-      else
-        redirect_to foods_index_path
-      end
     end
   end
 
