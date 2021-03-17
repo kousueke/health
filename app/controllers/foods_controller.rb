@@ -7,11 +7,11 @@ class FoodsController < ApplicationController
     @user = User.all
     @course = Course.all
     @course.find do |course|
-    #   # if course.user_id.present? # コースにユーザーidを登録している場合、登録ありfood画面、登録なしcourse画面
-    #   #   render :index
-    #   # else
-    #   #   redirect_to courses_path
-    #   # end
+      #   # if course.user_id.present? # コースにユーザーidを登録している場合、登録ありfood画面、登録なしcourse画面
+      #   #   render :index
+      #   # else
+      #   #   redirect_to courses_path
+      #   # end
     end
     # //コースがなければコース画面へ
     # @courses = Course.find_by(user_id: current_user.id
@@ -20,7 +20,6 @@ class FoodsController < ApplicationController
     # else
     #   redirect_to courses_path
     # end
-
   end
 
   def new
@@ -51,7 +50,6 @@ class FoodsController < ApplicationController
     @food.destroy
     redirect_to root_path
   end
-
 
   private
 
